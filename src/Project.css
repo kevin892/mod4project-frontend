@@ -1,0 +1,11 @@
+.trash-icon{
+  position: relative;
+  left: 340px;
+  bottom: 180px;
+  cursor: pointer;
+}
+
+.uk-heading-bullet{
+  position: relative;
+  left: 75px;
+}

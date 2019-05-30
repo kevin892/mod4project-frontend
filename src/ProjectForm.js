@@ -6,11 +6,11 @@ class ProjectForm extends React.Component {
     project_name: '',
     project_resource: '',
     project_attribute_1_name: '',
-    project_attribute_1_attribute: '',
+    project_attribute_1_type: '',
     project_attribute_2_name: '',
-    project_attribute_2_attribute: '',
+    project_attribute_2_type: '',
     project_attribute_3_name: '',
-    project_attribute_3_attribute: ''
+    project_attribute_3_type: ''
   }
 
   handleChange = (event) => {
@@ -21,6 +21,16 @@ class ProjectForm extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault()
     this.props.addProject(this.state)
+    this.setState({
+      project_name: '',
+      project_resource: '',
+      project_attribute_1_name: '',
+      project_attribute_1_type: '',
+      project_attribute_2_name: '',
+      project_attribute_2_type: '',
+      project_attribute_3_name: '',
+      project_attribute_3_type: ''
+    })
   }
 
   render() {

@@ -7,7 +7,8 @@ import Navbar from './Navbar'
 
 class App extends React.Component {
   state = {
-    projects: []
+    projects: [],
+    page:'register'
   }
 
   firstTimer(link, url) {
@@ -15,7 +16,7 @@ class App extends React.Component {
     Swal.fire({
       title: 'Generating!',
       html: '<strong></strong>',
-      timer: 4000,
+      timer: 3000,
       onBeforeOpen: () => {
         Swal.showLoading()
         timerInterval = setInterval(() => {
@@ -28,9 +29,9 @@ class App extends React.Component {
     }).then((result) => {
       if (result.dismiss === Swal.DismissReason.timer) {
         Swal.fire({
-          title: 'Your link is ready!',
-          text: `Please copy and paste the following text into the terminal 👉${link}`,
-          type: 'success',
+          title: 'Please copy and paste the following text into the terminal👇',
+          text: `${link}`,
+          type: 'info',
           showCancelButton: true,
           confirmButtonColor: '#3085d6',
           cancelButtonColor: '#d33',
@@ -38,15 +39,15 @@ class App extends React.Component {
         }).then((result) => {
           if (result.value) {
             Swal.fire({
-              title: 'Your link is ready!',
-              type: 'info',
+              title: 'Your API is ready!',
+              type: 'success',
               showCancelButton: false,
               confirmButtonColor: '#3085d6',
               cancelButtonColor: '#d33',
               confirmButtonText: 'Take me There!'
             }).then((result) => {
               if (result.value) {
-                window.location = `${url}s`
+                window.location = `${url}`
               }
             })
           }
@@ -57,9 +58,9 @@ class App extends React.Component {
 
   addProject = (post) => {
 debugger
-    const link = `rails new ${post.project_name} && cd ${post.project_name} && rails g scaffold ${post.project_resource}
+    const link = `cd && cd Desktop/ && mkdir ${post.project_name}_project && cd ${post.project_name}_project/ && rails new ${post.project_name} && cd ${post.project_name} && rails g scaffold ${post.project_resource}
      ${post.project_attribute_1_name}:${post.project_attribute_1_type} ${post.project_attribute_2_name}:${post.project_attribute_2_type}  ${post.project_attribute_3_name}:${post.project_attribute_3_type} && rails db:create && rails db:migrate && rails s -p 3001`
-    const url = `http://localhost:3001/${post.project_resource.toLowerCase()}`
+    const url = `http://localhost:3001/${post.project_resource.toLowerCase()}s`
 
     this.firstTimer(link, url)
 
@@ -101,7 +102,7 @@ debugger
   render() {
     return (<div>
       <br/>
-      <Navbar />
+      <Navbar apiList={this.apiList}/>
       <br/>
       <ProjectForm addProject={this.addProject}/>
       <Container projects={this.state.projects} removeProject={this.removeProject}/>
