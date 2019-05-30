@@ -1,0 +1,8 @@
+.blob-container {
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  margin: 20px;
+  background-color: #14ffec
+
+
+}

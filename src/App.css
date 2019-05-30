@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+body {
+  background: #323232;
+  padding-bottom: 200px;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+}
+img{
+  height: 40px;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
