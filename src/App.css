@@ -2,6 +2,9 @@
   text-align: center;
 }
 
+html {
+  background: #323232;
+}
 body {
   background: #323232;
   padding-bottom: 200px;

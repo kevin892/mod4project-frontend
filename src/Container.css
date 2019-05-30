@@ -1,8 +1,16 @@
 .blob-container {
   grid-template-columns: 1fr 1fr;
   display: grid;
-  margin: 20px;
+  margin: 90px;
   background-color: #14ffec
 
+
+}
+
+.uk-heading-small{
+   position: relative;
+  left: 150px;
+  /* text-align: center; */
+  color: white !important;
 
 }

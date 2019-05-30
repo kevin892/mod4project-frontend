@@ -10,3 +10,27 @@ body {
   background: #14ffec;
   color: black;
 }
+.uk-button-secondary{
+  background: #14ffec;
+  color: black;
+}
+/* .form-container {
+    width: 80%;
+    height: 200px;
+    background: aqua;
+    margin: auto;
+    padding: 10px;
+}
+.one {
+    width: 15%;
+    height: 200px;
+    background: red;
+    float: left;
+}
+.two {
+  position: relative;
+  left: 4000px;
+    margin-left: 15%;
+    height: 200px;
+    background: black;
+} */

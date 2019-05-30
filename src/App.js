@@ -3,6 +3,7 @@ import './App.css';
 import Container from './Container'
 import ProjectForm from './ProjectForm'
 import Swal from 'sweetalert2'
+import Navbar from './Navbar'
 
 class App extends React.Component {
   state = {
@@ -55,8 +56,9 @@ class App extends React.Component {
   }
 
   addProject = (post) => {
-
-    const link = `rails new ${post.project_name} && cd ${post.project_name} && rails g scaffold ${post.project_resource} ${post.project_attribute_1_name}:${post.project_attribute_1_type} ${post.project_attribute_2_name}:${post.project_attribute_2_type}  ${post.project_attribute_3_name}:${post.project_attribute_3_type} && rails db:create && rails db:migrate && rails s -p 3001`
+debugger
+    const link = `rails new ${post.project_name} && cd ${post.project_name} && rails g scaffold ${post.project_resource}
+     ${post.project_attribute_1_name}:${post.project_attribute_1_type} ${post.project_attribute_2_name}:${post.project_attribute_2_type}  ${post.project_attribute_3_name}:${post.project_attribute_3_type} && rails db:create && rails db:migrate && rails s -p 3001`
     const url = `http://localhost:3001/${post.project_resource.toLowerCase()}`
 
     this.firstTimer(link, url)
@@ -98,6 +100,9 @@ class App extends React.Component {
 
   render() {
     return (<div>
+      <br/>
+      <Navbar />
+      <br/>
       <ProjectForm addProject={this.addProject}/>
       <Container projects={this.state.projects} removeProject={this.removeProject}/>
     </div>)
