@@ -1,28 +1,35 @@
 import React from 'react';
 import './App.css';
-
+import Container from './Container'
+import ProjectForm from './ProjectForm'
+import Swal from 'sweetalert2'
+import Navbar from './Navbar'
 import MainComponent from './MainComponent'
 
 class App extends React.Component {
-state = {
-  page:"one"
-}
+  state = {
+    page: false
+  }
 
-checkpage = (id) => {
-  if (id == "two"){
-    this.setState({page:"two"})
-  }else {
-    this.setState({page:"one"})
+  apiLister = (input)=>{
+    if (input=="createApis"){
+    this.setState({page: true})
+  } else{
+  this.setState({page: false})
   }
 }
 
+change = (input)=>{
+  if (input=="change"){
+  this.setState({page: false})
+  }
+}
   render() {
-    return (
-      <div>
-        <button onClick={()=>this.checkpage("two")}>add</button>
-        <button onClick={()=>this.checkpage("one")}>all</button>
+    return (<div>
       <br/>
-      {this.state.page=="one" ? <MainComponent/>:<MainComponent kevin={"hello"}/>}
+      <Navbar apiLister={this.apiLister}/>
+      <br/>
+      <MainComponent change={this.change}page={this.state.page}/>
     </div>)
   }
 }

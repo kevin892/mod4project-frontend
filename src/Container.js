@@ -12,7 +12,7 @@ const projects = props.projects.map((project, index) => {
 return(
   <div>
 <br/>
-  <h1 class="uk-heading-small"><span uk-icon="icon: grid"></span><u>My APIs</u></h1>
+  <h1 class="uk-heading-small"><span uk-icon="icon: grid; ratio: 2"></span><strong>My APIs</strong></h1>
   <div className="blob-container" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
     {projects}
   </div>

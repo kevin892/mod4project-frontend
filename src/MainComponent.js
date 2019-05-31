@@ -7,8 +7,7 @@ import Navbar from './Navbar'
 
 class MainComponent extends React.Component {
   state = {
-    projects: [],
-    page: 'false'
+    projects: []
   }
 
   firstTimer(link, url) {
@@ -25,13 +24,14 @@ class MainComponent extends React.Component {
       },
       onClose: () => {
         clearInterval(timerInterval)
+        this.props.change("change")
       }
     }).then((result) => {
       if (result.dismiss === Swal.DismissReason.timer) {
         Swal.fire({
           title: 'Please copy and paste the following text into the terminal👇',
           text: `${link}`,
-          type: 'info',
+          type: 'success',
           showCancelButton: true,
           confirmButtonColor: '#3085d6',
           cancelButtonColor: '#d33',
@@ -98,18 +98,11 @@ class MainComponent extends React.Component {
     })
   }
 
-  apiLister(state){
-    if (state=="createApis"){
-    this.setState({page: "true"})
-    }
-  }
-
   render() {
     return (
       <div>
-    <Navbar apiLister={this.apiLister}/>
       <br/>
-      {this.props.kevin?<ProjectForm addProject={this.addProject}/>:
+      {this.props.page?<ProjectForm addProject={this.addProject}/>:
     <Container projects={this.state.projects} removeProject={this.removeProject}/>}
     </div>)
   }

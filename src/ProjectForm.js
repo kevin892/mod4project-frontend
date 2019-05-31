@@ -35,7 +35,10 @@ class ProjectForm extends React.Component {
 
   render() {
 
-    return (<form className='myform' onSubmit={this.handleSubmit}>
+    return (
+<div>
+  <h1 class="uk-heading-small"><span uk-icon="icon: grid; ratio: 2"></span><strong>Create API</strong></h1>
+      <form className='myform' onSubmit={this.handleSubmit}>
     <div className='form-container'>
     <div className='one'>
       <label className='uk-label'>Project Name</label>
@@ -72,7 +75,8 @@ class ProjectForm extends React.Component {
       </div>
       <br/>
       <button className="uk-button uk-button-secondary">Create</button>
-    </form>)
+    </form>
+  </div>)
 
   }
 }

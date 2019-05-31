@@ -11,10 +11,9 @@ return(
           <ul className="uk-navbar-nav">
               <a className="uk-navbar-item uk-logo"><span uk-icon="user"></span></a>
               <a className="uk-navbar-item uk-logo">Hi, Kevin</a>
-              <li onClick={()=>props.apiLister("myApis")}className="uk-parent"><a href="">My APIs</a></li>
-              <li  onClick={()=>props.apiLister("createApis")} className="uk-parent"><a href="">Create API</a></li>
+              <li onClick={()=>props.apiLister("myApis")}className="uk-parent"><a>My APIs</a></li>
+              <li  onClick={()=>props.apiLister("createApis")} className="uk-parent"><a >Create API</a></li>
               <li className="uk-parent"><a href="">Logout</a></li>
-              <li><a href=""></a></li>
           </ul>
           <img className='logo'src={logo}></img>
       </div>
