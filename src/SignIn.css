@@ -1,0 +1,21 @@
+.sign-in-form{
+  position: absolute;
+    right: 42%;
+}
+
+input {
+  width: 400px !important;
+
+}
+
+.sign-in-heading{
+  position: relative;
+  left: 800px !important;
+}
+
+.uk-button-primary{
+  background-color: #14ffec;
+  color: black;
+  position: relative;
+  left: 150px
+}
