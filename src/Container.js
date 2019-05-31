@@ -1,6 +1,7 @@
 import React from 'react'
 import Project from './Project'
 import './Container.css'
+const myState = false
 
 const Container = (props) => {
 

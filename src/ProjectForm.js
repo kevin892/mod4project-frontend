@@ -71,7 +71,7 @@ class ProjectForm extends React.Component {
       </div>
       </div>
       <br/>
-      <button class="uk-button uk-button-secondary">Create</button>
+      <button className="uk-button uk-button-secondary">Create</button>
     </form>)
 
   }
