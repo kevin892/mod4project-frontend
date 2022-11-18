@@ -10,7 +10,7 @@
     "react-iframe": "^1.8.0",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.1",
+    "react-scripts": "5.0.1",
     "sweetalert2": "^8.11.6",
     "terminal-in-react": "^4.3.1",
     "xterm": "^3.13.2"
